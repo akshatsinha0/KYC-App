@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.loksakshya.parsers.ParsersTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-09-02T18:43:10" hostname="DESKTOP-DG96NLN" time="0.034">
+  <properties/>
+  <testcase name="dl_basic" classname="com.loksakshya.parsers.ParsersTests" time="0.031"/>
+  <testcase name="pan_basic" classname="com.loksakshya.parsers.ParsersTests" time="0.001"/>
+  <testcase name="voter_basic" classname="com.loksakshya.parsers.ParsersTests" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

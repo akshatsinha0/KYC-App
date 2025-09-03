@@ -1,0 +1,11 @@
+{
+  "wireframes": [
+    {"screen":"Home","elements":["Consent button","Method buttons (DigiLocker hidden at launch)","Face","Scan","Submit & Sync","Sync Status"]},
+    {"screen":"Consent","elements":["Language EN/HI switch","Policy text","Agree"],"ascii":"[Consent]\n[EN|HI] [Scroll Terms]\n[Agree]"},
+    {"screen":"Method","elements":["Aadhaar ZIP+code","Scan Docs","Face"],"ascii":"[Method]\n[Aadhaar] [Scan] [Face]"},
+    {"screen":"Aadhaar","elements":["Pick ZIP","Enter share code","Verify","Preview","Confirm"],"ascii":"[ZIP][Code]\n[Verify]\n[Preview]\n[Confirm]"},
+    {"screen":"Scan","elements":["Camera view","Capture","Parse fields","Review/Edit","Confirm"],"ascii":"[Camera]\n[Capture]\n[Fields]\n[Confirm]"},
+    {"screen":"Face","elements":["Coach blinks/head-turn","Capture selfie","Compare doc photo","Show score"],"ascii":"[Coach]\n[Capture]\n[Score]"},
+    {"screen":"Submit & Sync","elements":["Queue status","Retry"],"ascii":"[Queue]\n[Retry]"}
+  ]
+}

@@ -1,0 +1,143 @@
+openapi: 3.0.3
+info:
+  title: Bharat KYC Local On-Prem API
+  version: 0.1.0
+  description: Local-only endpoints for session lifecycle, DigiLocker callback, and analytics
+servers:
+  - url: http://localhost:8080
+paths:
+  /v1/kyc/sessions:
+    post:
+      summary: Create a KYC session
+      parameters:
+        - in: header
+          name: Idempotency-Key
+          required: false
+          schema: {type: string}
+          description: Same key returns same result, no duplicate creation
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                method: {type: string, enum: [digilocker, aadhaar_offline, document_scan, unknown]}
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/KycSession'
+  /v1/kyc/sessions/{id}:
+    get:
+      summary: Get a KYC session
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema: {type: string}
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/KycSession'
+        '404': {description: Not Found}
+  /v1/kyc/sessions/{id}/finalize:
+    post:
+      summary: Finalize a KYC session
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema: {type: string}
+        - in: header
+          name: Idempotency-Key
+          required: false
+          schema: {type: string}
+          description: Same key returns same result, no duplicate finalize
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                resultDigest: {type: string, description: Hash digest of submission payload}
+                signature: {type: string, description: Signature over resultDigest using local audit key}
+                deviceId: {type: string}
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/KycSession'
+        '404': {description: Not Found}
+  /v1/digilocker/callback:
+    post:
+      summary: DigiLocker OAuth callback (local stub)
+      parameters:
+        - in: query
+          name: code
+          required: true
+          schema: {type: string}
+        - in: query
+          name: state
+          required: true
+          schema: {type: string}
+      responses:
+        '200':
+          description: Received
+          content:
+            text/html:
+              schema:
+                type: string
+  /v1/events:
+    post:
+      summary: Post analytics events (local-only)
+      parameters:
+        - in: header
+          name: Idempotency-Key
+          required: false
+          schema: {type: string}
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              oneOf:
+                - $ref: '#/components/schemas/AnalyticsEvent'
+                - type: array
+                  items: {$ref: '#/components/schemas/AnalyticsEvent'}
+      responses:
+        '202':
+          description: Accepted
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ok: {type: boolean}
+                  count: {type: integer}
+                  duplicate: {type: boolean}
+components:
+  schemas:
+    KycSession:
+      type: object
+      properties:
+        id: {type: string}
+        status: {type: string}
+        method: {type: string}
+        createdAt: {type: string}
+        updatedAt: {type: string}
+    AnalyticsEvent:
+      type: object
+      properties:
+        ts: {type: integer, description: millis since epoch}
+        event: {type: string}
+        props: {type: object}
+

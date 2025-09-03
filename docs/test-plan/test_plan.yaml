@@ -1,0 +1,14 @@
+phases:
+  - phase: Phase 1 – scaffold and stub validation
+    steps:
+      - name: Start server
+        cmd: cd server && npm install && npm start
+      - name: Create session
+        cmd: curl -s -X POST http://localhost:8080/v1/kyc/sessions -H "Content-Type: application/json" -H "Idempotency-Key: abc123" -d '{"method":"digilocker"}'
+      - name: Test callback page
+        action: Open http://localhost:8080/web/digilocker.html and complete flow
+  - phase: Phase 2 – mobile core (offline flows)
+    notes: Unit and instrumentation tests for Aadhaar verify, OCR mocks, liveness/facematch mocks, WorkManager queue
+  - phase: Phase 3 – polish and languages
+    notes: Add assistant strings and validation hints
+

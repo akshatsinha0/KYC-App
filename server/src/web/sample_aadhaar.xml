@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfflinePaperlessKyc 
+    referenceId="20250902171800123" 
+    ts="2025-09-02T17:18:00" 
+    version="2.5">
+  <UidData 
+      uid="1234-5678-9012" 
+      name="John Doe" 
+      gender="M" 
+      dob="01-01-1990" 
+      co="S/O Jane Doe"
+      house="123" 
+      street="Sample Street" 
+      lm="Near Test Park" 
+      loc="Test Locality" 
+      vtc="Test City" 
+      subdist="Test Sub District" 
+      dist="Test District" 
+      state="Test State" 
+      pc="123456" 
+      phone="9876543210" 
+      email="test@example.com">
+    <Pht>/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/2wBDAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwA/8A</Pht>
+  </UidData>
+  <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+    <SignedInfo>
+      <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+      <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+      <Reference URI="">
+        <Transforms>
+          <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+        </Transforms>
+        <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+        <DigestValue>MOCK_DIGEST_VALUE_FOR_TESTING_ONLY</DigestValue>
+      </Reference>
+    </SignedInfo>
+    <SignatureValue>MOCK_SIGNATURE_VALUE_FOR_TESTING_PURPOSES_ONLY</SignatureValue>
+    <KeyInfo>
+      <X509Data>
+        <X509Certificate>MOCK_CERTIFICATE_FOR_TESTING_ONLY</X509Certificate>
+      </X509Data>
+    </KeyInfo>
+  </Signature>
+</OfflinePaperlessKyc>

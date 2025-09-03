@@ -1,0 +1,59 @@
+screens:
+  - id: home
+    ascii: |-
+      +-----------------------------+
+      | Bharat KYC                 |
+      | [Select Language  [EN/HIN]]|
+      |-----------------------------|
+      | [Start]                    |
+      +-----------------------------+
+  - id: consent
+    ascii: |-
+      +-----------------------------+
+      | Consent                    |
+      | We store minimal data only |
+      | [Agree & Continue]        |
+      +-----------------------------+
+  - id: method
+    ascii: |-
+      +-----------------------------+
+      | Choose KYC Method          |
+      | [DigiLocker]               |
+      | [Aadhaar Offline XML]      |
+      | [Scan Documents]           |
+      +-----------------------------+
+  - id: digilocker
+    ascii: |-
+      +-----------------------------+
+      | DigiLocker Redirect        |
+      | Opens in-app browser       |
+      | Returns to app            |
+      +-----------------------------+
+  - id: aadhaar_offline
+    ascii: |-
+      +-----------------------------+
+      | Select ZIP + Share Code    |
+      | [Verify]                   |
+      | [Preview]                  |
+      +-----------------------------+
+  - id: document_scan
+    ascii: |-
+      +-----------------------------+
+      | Camera Capture             |
+      | OCR and Edit               |
+      | [Confirm]                  |
+      +-----------------------------+
+  - id: face
+    ascii: |-
+      +-----------------------------+
+      | Liveness + Face Match      |
+      | [Start]                    |
+      +-----------------------------+
+  - id: submit
+    ascii: |-
+      +-----------------------------+
+      | Submit & Sync              |
+      | Queue shows progress       |
+      | [Retry] [Done]             |
+      +-----------------------------+
+

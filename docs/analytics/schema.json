@@ -1,0 +1,16 @@
+{
+  "events": {
+    "app_open": {"props": ["lang","build"]},
+    "consent_accepted": {"props": ["ts"]},
+    "method_selected": {"props": ["method"]},
+    "aadhaar_verify_start": {"props": ["file_size"]},
+    "aadhaar_verify_result": {"props": ["ok","ms","error"]},
+    "ocr_capture": {"props": ["doc_type","ms"]},
+    "ocr_edit_rate": {"props": ["fields_edited"]},
+    "liveness_result": {"props": ["ok","score"]},
+    "facematch_result": {"props": ["score"]},
+    "submit_enqueued": {"props": ["queue_len"]},
+    "submit_result": {"props": ["ok","ms","retries"]}
+  }
+}
+

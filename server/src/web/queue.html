@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>KYC Queue Tester</title>
+  <style>body{font-family:system-ui,Arial;padding:16px;max-width:720px;margin:0 auto}input,button{font-size:16px;padding:10px;width:100%}textarea{width:100%;height:120px}label{font-size:14px;color:#333} .row{margin:12px 0}</style>
+</head>
+<body>
+  <h2>Local KYC Queue Tester</h2>
+  <div class="row">
+    <label>Base URL</label>
+    <input id="base" value="http://localhost:8080"/>
+  </div>
+  <div class="row">
+    <button id="create">Create KYC session</button>
+  </div>
+  <div class="row">
+    <label>Session ID</label>
+    <input id="sid" placeholder="session id"/>
+  </div>
+  <div class="row">
+    <label>Finalize payload (JSON)</label>
+    <textarea id="payload">{"foo":"bar"}</textarea>
+  </div>
+  <div class="row">
+    <button id="finalize">Finalize (direct POST)</button>
+  </div>
+  <pre id="out"></pre>
+  <script>
+    const out=document.getElementById('out');
+    function log(x){ out.textContent += (typeof x==='string'?x:JSON.stringify(x,null,2))+'\n' }
+    async function post(url,body,headers={}){
+      const res=await fetch(url,{method:'POST',headers:Object.assign({'Content-Type':'application/json'},headers),body:JSON.stringify(body)});
+      const txt=await res.text();
+      try{return JSON.parse(txt)}catch(_){return txt}
+    }
+    document.getElementById('create').onclick=async()=>{
+      const base=document.getElementById('base').value.trim();
+      const idem=Math.random().toString(36).slice(2);
+      const res=await fetch(base+'/v1/kyc/sessions',{method:'POST',headers:{'Content-Type':'application/json','Idempotency-Key':idem},body:JSON.stringify({method:'document_scan'})});
+      const data=await res.json();
+      document.getElementById('sid').value=data.id; log(data)
+    }
+    document.getElementById('finalize').onclick=async()=>{
+      const base=document.getElementById('base').value.trim();
+      const sid=document.getElementById('sid').value.trim();
+      const payload=document.getElementById('payload').value.trim();
+      let obj; try{ obj=JSON.parse(payload) }catch(e){ log('bad json'); return }
+      const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(JSON.stringify(obj)));
+      const hex=Array.from(new Uint8Array(digest)).map(b=>('0'+b.toString(16)).slice(-2)).join('');
+      const headers={'Idempotency-Key':hex.slice(0,32)};
+      const res=await post(base+`/v1/kyc/sessions/${sid}/finalize`,{resultDigest:hex},headers);
+      log(res)
+    }
+  </script>
+</body>
+</html>
+

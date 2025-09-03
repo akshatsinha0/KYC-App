@@ -1,0 +1,12 @@
+title: Security and privacy decisions
+status: accepted
+context: |
+  Strong privacy requirements. PII must not leave device. Aadhaar Offline must be verified and decrypted on-device.
+decision: |
+  Use AES-GCM for data at rest. Generate per-app AES key and protect it with Android Keystore.
+  Minimize stored data. Keep only needed fields, digests, and minimal embeddings. Clear retention policy.
+  Verify Aadhaar Offline signature using X.509 chain. Reject if tampered or expired.
+  Use idempotency keys for submissions.
+consequences: |
+  Breach impact is reduced. Local audits possible. No external PII transfer by default.
+

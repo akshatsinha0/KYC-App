@@ -1,0 +1,16 @@
+{
+  "analytics_schema": {
+    "events": {
+      "session_created": {"props": ["method"]},
+      "aadhaar_verified": {"props": ["ok","ref_id"]},
+      "face_liveness": {"props": ["ok","score"]},
+      "facematch": {"props": ["score"]},
+      "ocr_parsed": {"props": ["doc_type","fields"]},
+      "ocr_edited": {"props": ["doc_type","field_count"]},
+      "kyc_finalized": {"props": ["method"]},
+      "kyc_complete": {"props": ["method","duration_ms"]},
+      "sync_retry": {"props": ["count"]}
+    },
+    "local_aggregates": ["completions","liveness_success","ocr_edit_count","retry_count"]
+  }
+}

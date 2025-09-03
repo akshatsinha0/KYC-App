@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>DigiLocker Consent Stub</title>
+  <style>
+    body{font-family:system-ui,Arial;padding:16px;max-width:720px;margin:0 auto}
+    .row{margin:12px 0}
+    input,button{font-size:16px;padding:10px;width:100%}
+    label{font-size:14px;color:#333}
+  </style>
+</head>
+<body>
+  <h2>DigiLocker consent (local stub)</h2>
+  <p>This page lets you simulate a DigiLocker consent and callback flow locally.</p>
+  <div class="row">
+    <label>State (usually your KYC session id)</label>
+    <input id="state" placeholder="paste session id"/>
+  </div>
+  <div class="row">
+    <label>Redirect URI (your app or server)</label>
+    <input id="redirect" value="http://localhost:8080/v1/digilocker/callback"/>
+  </div>
+  <div class="row">
+    <button id="grant">Grant consent</button>
+  </div>
+  <div class="row">
+    <button id="direct">Call local callback now</button>
+  </div>
+  <script>
+    function qs(sel){return document.querySelector(sel)}
+    function enc(v){return encodeURIComponent(v||'')}
+    qs('#grant').onclick=function(){
+      const code='stub-auth-code'
+      const state=qs('#state').value.trim()
+      const redirect=qs('#redirect').value.trim()
+      if(!state||!redirect){alert('Enter state and redirect');return}
+      const url=redirect+(redirect.includes('?')?'&':'?')+`code=${enc(code)}&state=${enc(state)}`
+      window.location.href=url
+    }
+    qs('#direct').onclick=function(){
+      const code='stub-auth-code'
+      const state=qs('#state').value.trim()
+      const redirect='http://localhost:8080/v1/digilocker/callback'
+      if(!state){alert('Enter state');return}
+      fetch(redirect+`?code=${enc(code)}&state=${enc(state)}`,{method:'POST'}).then(r=>r.text()).then(html=>{
+        const w=window.open('about:blank','_blank')
+        w.document.write(html)
+      })
+    }
+  </script>
+</body>
+</html>
+

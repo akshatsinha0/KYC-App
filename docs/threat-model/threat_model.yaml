@@ -1,0 +1,26 @@
+title: Threat model
+method: STRIDE-lite
+assets:
+  - name: PII store
+    desc: Encrypted local DB and files
+  - name: Audit log
+    desc: Local log of submissions and digests
+  - name: Aadhaar artifacts
+    desc: ZIP, XML, signature
+threats:
+  - id: T1
+    name: Device theft
+    mitigation: AES-GCM encryption, Keystore, lock screen required
+  - id: T2
+    name: Tampered Aadhaar ZIP
+    mitigation: Strict signature check, hash match, expiry check
+  - id: T3
+    name: Network replay of finalize
+    mitigation: Idempotency keys, request signing, server dedupe
+  - id: T4
+    name: User confusion
+    mitigation: Large buttons, local “Tap-to-Explain”, retry hints
+  - id: T5
+    name: ML model extraction
+    mitigation: Quantized small models, obfuscation, no raw media storage
+

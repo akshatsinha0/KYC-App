@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Bharat KYC</string>
+  <string name="consent">Consent</string>
+  <string name="method_digilocker">DigiLocker</string>
+  <string name="method_aadhaar">Aadhaar Offline XML</string>
+  <string name="method_scan">Scan Documents</string>
+  <string name="face">Face Check</string>
+  <string name="submit">Submit &amp; Sync</string>
+  <string name="toast_stub">Feature stub</string>
+  
+  <!-- Sync Status Screen -->
+  <string name="sync_status_title">Sync Status</string>
+  <string name="sync_status_description">Monitor KYC data synchronization with the server</string>
+  <string name="sync_status_initializing">Initializing sync...</string>
+  <string name="sync_retry">Retry Sync Now</string>
+  <string name="sync_test">Create Test Sync Job</string>
+  <string name="sync_info">Sync runs automatically every 15 minutes when connected to network and battery is not low. Failed jobs will retry with exponential backoff.</string>
+</resources>
+

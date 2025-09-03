@@ -1,0 +1,21 @@
+{
+  "test_plan": {
+    "mobile_unit": [
+      "Aadhaar offline: bad_zip, bad_share_code, xml_missing, signature_missing, signature_invalid",
+      "Parsers: PAN/DL/Voter regex samples",
+      "Crypto: AES-GCM encrypt/decrypt roundtrip",
+      "Sync: queue append, retry, idempotency key generation"
+    ],
+    "instrumentation": [
+      "Capture: camera orientation and frame delivery (stub until real CameraX binding)",
+      "Face: liveness sequence with mocked landmarks",
+      "OCR: model load (dynamic feature) and recognition on golden images"
+    ],
+    "server_contract": [
+      "healthz returns 200",
+      "sessions create/get/finalize with Idempotency-Key",
+      "events accepts single and batch"
+    ],
+    "size_budget": ["Base APK ≤ 15MB; OCR/Face in dynamic features"]
+  }
+}

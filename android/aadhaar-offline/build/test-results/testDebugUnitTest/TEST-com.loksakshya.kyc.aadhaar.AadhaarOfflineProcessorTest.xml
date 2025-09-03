@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.loksakshya.kyc.aadhaar.AadhaarOfflineProcessorTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2025-09-03T10:52:25" hostname="DESKTOP-DG96NLN" time="0.019">
+  <properties/>
+  <testcase name="testEmptyZipHandling" classname="com.loksakshya.kyc.aadhaar.AadhaarOfflineProcessorTest" time="0.001"/>
+  <testcase name="testCustomConfiguration" classname="com.loksakshya.kyc.aadhaar.AadhaarOfflineProcessorTest" time="0.0"/>
+  <testcase name="testConfigurationDefaults" classname="com.loksakshya.kyc.aadhaar.AadhaarOfflineProcessorTest" time="0.0"/>
+  <testcase name="testInvalidZipHandling" classname="com.loksakshya.kyc.aadhaar.AadhaarOfflineProcessorTest" time="0.017"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,2 @@
+com.loksakshya.kyc.aadhaar
+raw uidai_cert_placeholder

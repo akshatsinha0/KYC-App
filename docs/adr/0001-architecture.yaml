@@ -1,0 +1,16 @@
+title: Architecture decisions
+status: accepted
+context: |
+  App must work offline on low-end Android. No cloud. Local/on-prem only for DigiLocker callback and optional audit.
+  APK size should be small. OCR and Face as dynamic features to keep base small.
+  Data stays on-device with AES-GCM. Keystore holds key material.
+  WorkManager handles offline queue, retries, and idempotency.
+  UI has simple screens with large buttons and clear guidance.
+decision: |
+  Use modular Android app in Kotlin. SDK module to embed in host apps.
+  Use local Express server as stub for DigiLocker callback. Provide OpenAPI for on-prem swap.
+  Keep OCR and Face modules optional dynamic features. Quantize ML models to <=8 MB total.
+  Store only minimal scores/embeddings locally. No raw video.
+consequences: |
+  Low bandwidth and storage use. Clear offline behavior. Simple to deploy on-prem since no cloud services.
+

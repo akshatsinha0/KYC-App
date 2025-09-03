@@ -1,0 +1,17 @@
+{
+  "threat_model": {
+    "version": "0.1",
+    "assumptions": ["Device can be offline","No cloud storage","Local server only for callback/audit"],
+    "assets": ["PII fields","Aadhaar ZIP","face embeddings","queue","audit keys"],
+    "attack_surfaces": ["lost device","malware on device","network eavesdropping to local server"],
+    "mitigations": {
+      "at_rest": ["AES-GCM via Android Keystore-wrapped key","no external storage","30-day retention"],
+      "in_transit": ["HTTP to local server only; permit TLS for on-prem"],
+      "authz": ["local-only operations; session state machine"],
+      "tamper": ["Aadhaar signature verify","payload hash+sign for audit"],
+      "privacy": ["store scores/embeddings only; no raw video"]
+    },
+    "data_minimization": ["delete raw frames post-processing","keep only derived values"],
+    "residual_risks": ["compromised OS","rooted devices"]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "sdk_integration": {
+    "module": "kyc-sdk",
+    "entrypoints": {
+      "createSession": {"sig": "(Context, method:String) -> KycSession"},
+      "enqueueFinalize": {"sig": "(Context, baseUrl:String, session:KycSession, payload:JSONObject)"}
+    },
+    "flow": [
+      "createSession(method)",
+      "collect inputs (aadhaar zip/scan/face)",
+      "build local result payload",
+      "enqueueFinalize(baseUrl, session, payload)"
+    ],
+    "digilocker": {
+      "enabled": false,
+      "note": "Enable later by wiring digilocker module and server redirect"
+    }
+  }
+}
