@@ -1,0 +1,1 @@
+:ocr::debug;Capability: group='bharat-kyc-android', name='ocr'

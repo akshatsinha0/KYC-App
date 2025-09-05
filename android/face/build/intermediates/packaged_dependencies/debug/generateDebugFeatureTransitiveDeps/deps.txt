@@ -1,0 +1,1 @@
+:face::debug;Capability: group='bharat-kyc-android', name='face'

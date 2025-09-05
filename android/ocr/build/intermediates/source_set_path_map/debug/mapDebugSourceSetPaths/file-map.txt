@@ -1,0 +1,7 @@
+com.loksakshya.kyc.ocr-pngs-0 E:\KYC App\bharat-kyc\android\ocr\build\generated\res\pngs\debug
+com.loksakshya.kyc.ocr-resValues-1 E:\KYC App\bharat-kyc\android\ocr\build\generated\res\resValues\debug
+com.loksakshya.kyc.ocr-packageDebugResources-2 E:\KYC App\bharat-kyc\android\ocr\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.loksakshya.kyc.ocr-packageDebugResources-3 E:\KYC App\bharat-kyc\android\ocr\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.loksakshya.kyc.ocr-debug-4 E:\KYC App\bharat-kyc\android\ocr\build\intermediates\merged_res\debug\mergeDebugResources
+com.loksakshya.kyc.ocr-debug-5 E:\KYC App\bharat-kyc\android\ocr\src\debug\res
+com.loksakshya.kyc.ocr-main-6 E:\KYC App\bharat-kyc\android\ocr\src\main\res

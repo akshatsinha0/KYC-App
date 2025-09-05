@@ -1,0 +1,1 @@
+{"minSdkVersion":23,"maxNumberOfSplitsBeforeO":50,"featureSplits":[{"modulePath":":ocr","featureName":"ocr","resOffset":126,"namespace":"com.loksakshya.kyc.ocr"},{"modulePath":":face","featureName":"face","resOffset":125,"namespace":"com.loksakshya.kyc.face"}]}

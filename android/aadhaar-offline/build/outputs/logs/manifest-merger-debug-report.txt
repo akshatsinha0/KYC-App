@@ -1,0 +1,15 @@
+-- Merging decision tree log ---
+manifest
+ADDED from E:\KYC App\bharat-kyc\android\aadhaar-offline\src\main\AndroidManifest.xml:2:1-49
+INJECTED from E:\KYC App\bharat-kyc\android\aadhaar-offline\src\main\AndroidManifest.xml:2:1-49
+	package
+		ADDED from E:\KYC App\bharat-kyc\android\aadhaar-offline\src\main\AndroidManifest.xml:2:11-47
+		INJECTED from E:\KYC App\bharat-kyc\android\aadhaar-offline\src\main\AndroidManifest.xml
+uses-sdk
+INJECTED from E:\KYC App\bharat-kyc\android\aadhaar-offline\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from E:\KYC App\bharat-kyc\android\aadhaar-offline\src\main\AndroidManifest.xml
+INJECTED from E:\KYC App\bharat-kyc\android\aadhaar-offline\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from E:\KYC App\bharat-kyc\android\aadhaar-offline\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from E:\KYC App\bharat-kyc\android\aadhaar-offline\src\main\AndroidManifest.xml

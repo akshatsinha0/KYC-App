@@ -104,9 +104,6 @@ object UidaiTrustStore {
         return JcaX509CertificateConverter().setProvider("BC").getCertificate(holder)
     }
     
-    /**
-     * Verify if a certificate is trusted by the UIDAI chain
-     ****//
     fun isTrustedCertificate(certificate: X509Certificate, trustChain: List<X509Certificate>): Boolean {
         return trustChain.any { trustedCert ->
             try {

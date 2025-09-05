@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.loksakshya.bharatkyc.app-mergeDebugResources-43:/values-port/values-port.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Akshat Sinha\\.gradle\\caches\\transforms-4\\5180422ea3b88499bfe31e298975a1b9\\transformed\\appcompat-1.7.0\\res\\values-port\\values-port.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "55",
+                        "endOffsets": "106"
+                    }
+                }
+            ]
+        }
+    ]
+}

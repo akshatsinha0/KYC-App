@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "com.loksakshya.bharatkyc.app-mergeDebugResources-44:/layout/activity_aadhaar.xml",
+        "source": "com.loksakshya.bharatkyc.app-main-47:/layout/activity_aadhaar.xml"
+    },
+    {
+        "merged": "com.loksakshya.bharatkyc.app-mergeDebugResources-44:/layout/activity_document_scan.xml",
+        "source": "com.loksakshya.bharatkyc.app-main-47:/layout/activity_document_scan.xml"
+    },
+    {
+        "merged": "com.loksakshya.bharatkyc.app-mergeDebugResources-44:/layout/activity_sync_status.xml",
+        "source": "com.loksakshya.bharatkyc.app-main-47:/layout/activity_sync_status.xml"
+    },
+    {
+        "merged": "com.loksakshya.bharatkyc.app-mergeDebugResources-44:/layout/activity_face.xml",
+        "source": "com.loksakshya.bharatkyc.app-main-47:/layout/activity_face.xml"
+    },
+    {
+        "merged": "com.loksakshya.bharatkyc.app-mergeDebugResources-44:/layout/activity_main.xml",
+        "source": "com.loksakshya.bharatkyc.app-main-47:/layout/activity_main.xml"
+    }
+]

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="aadhaar_ok">आधार सत्यापित</string>
+    <string name="aadhaar_zip_not_selected">ZIP नहीं चुना</string>
+    <string name="aadhaar_zip_selected">ZIP चुना गया</string>
+    <string name="app_name">भारत KYC</string>
+    <string name="consent">सहमति</string>
+    <string name="face">चेहरा जाँच</string>
+    <string name="method_aadhaar">आधार ऑफ़लाइन XML</string>
+    <string name="method_digilocker">डिजीलॉकर</string>
+    <string name="method_scan">दस्तावेज़ स्कैन</string>
+    <string name="submit">सबमिट व सिंक</string>
+    <string name="sync_info">नेटवर्क कनेक्शन और बैटरी कम न होने पर सिंक हर 15 मिनट में अपने आप चलता है। असफल जॉब्स exponential backoff के साथ पुनः प्रयास करेंगे।</string>
+    <string name="sync_retry">अभी सिंक पुनः प्रयास करें</string>
+    <string name="sync_status_description">सर्वर के साथ KYC डेटा सिंक्रोनाइज़ेशन की निगरानी करें</string>
+    <string name="sync_status_initializing">सिंक प्रारंभ हो रहा है...</string>
+    <string name="sync_status_title">सिंक स्थिति</string>
+    <string name="sync_test">टेस्ट सिंक जॉब बनाएं</string>
+    <string name="toast_stub">यह अभी उपलब्ध नहीं है</string>
+</resources>

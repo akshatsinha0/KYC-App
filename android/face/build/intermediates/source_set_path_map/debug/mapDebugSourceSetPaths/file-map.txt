@@ -1,0 +1,7 @@
+com.loksakshya.kyc.face-pngs-0 E:\KYC App\bharat-kyc\android\face\build\generated\res\pngs\debug
+com.loksakshya.kyc.face-resValues-1 E:\KYC App\bharat-kyc\android\face\build\generated\res\resValues\debug
+com.loksakshya.kyc.face-packageDebugResources-2 E:\KYC App\bharat-kyc\android\face\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.loksakshya.kyc.face-packageDebugResources-3 E:\KYC App\bharat-kyc\android\face\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.loksakshya.kyc.face-debug-4 E:\KYC App\bharat-kyc\android\face\build\intermediates\merged_res\debug\mergeDebugResources
+com.loksakshya.kyc.face-debug-5 E:\KYC App\bharat-kyc\android\face\src\debug\res
+com.loksakshya.kyc.face-main-6 E:\KYC App\bharat-kyc\android\face\src\main\res

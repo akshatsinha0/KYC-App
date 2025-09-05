@@ -1,0 +1,15 @@
+-- Merging decision tree log ---
+manifest
+ADDED from E:\KYC App\bharat-kyc\android\analytics\src\main\AndroidManifest.xml:2:1-51
+INJECTED from E:\KYC App\bharat-kyc\android\analytics\src\main\AndroidManifest.xml:2:1-51
+	package
+		ADDED from E:\KYC App\bharat-kyc\android\analytics\src\main\AndroidManifest.xml:2:11-49
+		INJECTED from E:\KYC App\bharat-kyc\android\analytics\src\main\AndroidManifest.xml
+uses-sdk
+INJECTED from E:\KYC App\bharat-kyc\android\analytics\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from E:\KYC App\bharat-kyc\android\analytics\src\main\AndroidManifest.xml
+INJECTED from E:\KYC App\bharat-kyc\android\analytics\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from E:\KYC App\bharat-kyc\android\analytics\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from E:\KYC App\bharat-kyc\android\analytics\src\main\AndroidManifest.xml
