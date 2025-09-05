@@ -77,6 +77,31 @@ app.post('/v1/events',(req,res)=>{
   return res.status(202).json({ok:true,count:evts.length,duplicate:false})
 })
 
+app.post('/v1/assistant/explain',(req,res)=>{
+  const screen=(req.body?.screen||'').toString().toLowerCase()
+  const field=(req.body?.field||'').toString().toLowerCase()
+  const issue=(req.body?.issue||'').toString().toLowerCase()
+  const lines=[]
+  if(screen==='aadhaar'){ lines.push('Select the ZIP file and enter the 4-digit share code'); lines.push('Make sure the ZIP password matches the share code'); lines.push('Verify then review before submit') }
+  if(screen==='document'){ lines.push('Capture or paste text'); lines.push('Fix any misread fields before submit') }
+  if(screen==='face'){ lines.push('Keep your face centered'); lines.push('Blink once and turn slightly') }
+  if(field==='share_code'){ lines.push('Use the 4 digits set while downloading the ZIP') }
+  if(issue.includes('network')){ lines.push('Data is queued offline and will sync automatically') }
+  if(lines.length===0){ lines.push('Follow the on-screen steps and continue') }
+  res.json({lines})
+})
+
+app.post('/v1/face/liveness',(req,res)=>{
+  const seq=req.body?.seq||[]
+  const arr=Array.isArray(seq)?seq.map(x=>Number(x)):[]
+  if(arr.length===0)return res.status(400).json({error:'bad_seq'})
+  const min=Math.min(...arr)
+  const max=Math.max(...arr)
+  const blink=min<0.18 && (max-min)>0.12
+  const score=blink?0.6:0
+  res.json({ok:score>=0.6,score})
+})
+
 app.get('/healthz',(_req,res)=>res.json({ok:true}))
 
 app.listen(PORT,()=>{
