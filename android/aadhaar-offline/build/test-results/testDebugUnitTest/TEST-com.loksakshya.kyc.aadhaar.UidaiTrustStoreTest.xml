@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.loksakshya.kyc.aadhaar.UidaiTrustStoreTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-09-03T10:52:24" hostname="DESKTOP-DG96NLN" time="0.91">
+<testsuite name="com.loksakshya.kyc.aadhaar.UidaiTrustStoreTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-09-05T15:43:39" hostname="DESKTOP-DG96NLN" time="0.593">
   <properties/>
-  <testcase name="testLoadMultiplePemCertificates" classname="com.loksakshya.kyc.aadhaar.UidaiTrustStoreTest" time="0.698"/>
-  <testcase name="testLoadPemCertificates" classname="com.loksakshya.kyc.aadhaar.UidaiTrustStoreTest" time="0.137"/>
-  <testcase name="testGetCertificateInfo" classname="com.loksakshya.kyc.aadhaar.UidaiTrustStoreTest" time="0.074"/>
+  <testcase name="testLoadMultiplePemCertificates" classname="com.loksakshya.kyc.aadhaar.UidaiTrustStoreTest" time="0.365"/>
+  <testcase name="testLoadPemCertificates" classname="com.loksakshya.kyc.aadhaar.UidaiTrustStoreTest" time="0.161"/>
+  <testcase name="testGetCertificateInfo" classname="com.loksakshya.kyc.aadhaar.UidaiTrustStoreTest" time="0.066"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
