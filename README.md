@@ -1,5 +1,33 @@
 # Bharat KYC
 
+## Project Configuration
+
+```json
+{
+  "name": "bharat-kyc",
+  "org": "LokSakshya",
+  "environments": ["dev","staging","prod"],
+  "appId": "com.loksakshya.bharatkyc",
+  "languages": ["en","hi"],
+  "summary": "Lightweight, offline-first KYC app and SDK. All PII stays on-device. Local server only for DigiLocker callback and audits.",
+  "modules": ["app","kyc-sdk","capture","ocr (dynamic)","face (dynamic)","digilocker","aadhaar-offline","sync","crypto","i18n","analytics"],
+  "launch_flags": {"digilocker_enabled": false},
+  "server": {
+    "desc": "Local stub for DigiLocker callback and analytics",
+    "start": "cd server && npm install && npm start",
+    "urls": ["http://localhost:8080/healthz","http://localhost:8080/web/digilocker.html"]
+  },
+  "openapi": "openapi/openapi.yaml",
+  "notes": [
+    "No .md or .txt docs used. JSON/YAML only.",
+    "ML models are placeholders. Keep size small.",
+    "Replace org if needed; update appId accordingly.",
+    "Base APK ≤ 15MB; OCR/Face in dynamic features",
+    "Retention: 30 days"
+  ]
+}
+```
+
 A small, offline‑first KYC app + SDK for Android with a local server, simple web demos, and CLI tools.
 
 What you get:
