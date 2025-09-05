@@ -5,6 +5,8 @@ const ASSETS=[
   '/web/digilocker.html',
   '/web/queue.html',
   '/web/aadhaar.html',
+  '/web/assistant.html',
+  '/web/face.html',
   '/web/js/zip.min.js'
 ];
 self.addEventListener('install',e=>{
