@@ -35,7 +35,7 @@
       <input type="text" id="shareCode" placeholder="1234" maxlength="4" pattern="[0-9]{4}" />
     </div>
     
-    <button id="verifyBtn" onclick="verifyAadhaar()">🔍 Verify & Extract</button>
+    <button id="verifyBtn" onclick="verifyAadhaar()">Verify & Extract</button>
   </div>
 
   <div id="results"></div>
@@ -86,7 +86,7 @@
         else showError(`Verification failed: ${error.message}`);
       } finally {
         verifyBtn.disabled = false;
-        verifyBtn.textContent = '🔍 Verify & Extract';
+        verifyBtn.textContent = 'Verify & Extract';
       }
     }
     
