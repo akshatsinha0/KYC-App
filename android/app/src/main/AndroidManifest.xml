@@ -12,6 +12,9 @@
       </intent-filter>
     </activity>
     <activity android:name="com.loksakshya.bharatkyc.SyncStatusActivity" android:exported="false"/>
+    <activity android:name="com.loksakshya.bharatkyc.AadhaarActivity" android:exported="false"/>
+    <activity android:name="com.loksakshya.bharatkyc.DocumentScanActivity" android:exported="false"/>
+    <activity android:name="com.loksakshya.bharatkyc.FaceActivity" android:exported="false"/>
   </application>
 </manifest>
 

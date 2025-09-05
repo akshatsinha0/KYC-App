@@ -29,6 +29,7 @@
     <button id="direct">Call local callback now</button>
   </div>
   <script>
+    if('serviceWorker' in navigator){ navigator.serviceWorker.register('/web/sw.js').catch(()=>{}) }
     function qs(sel){return document.querySelector(sel)}
     function enc(v){return encodeURIComponent(v||'')}
     qs('#grant').onclick=function(){

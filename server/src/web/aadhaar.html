@@ -41,9 +41,10 @@
   <div id="results"></div>
 
   <!-- zip.js for password-protected ZIP handling (AES) -->
-  <script src="https://cdn.jsdelivr.net/npm/@zip.js/zip.js/dist/zip.min.js"></script>
+  <script src="./js/zip.min.js"></script>
  
  <script>
+    if('serviceWorker' in navigator){ navigator.serviceWorker.register('/web/sw.js').catch(()=>{}) }
     async function verifyAadhaar() {
       const zipFile = document.getElementById('zipFile').files[0];
       const shareCode = document.getElementById('shareCode').value;

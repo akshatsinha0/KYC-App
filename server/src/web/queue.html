@@ -28,6 +28,7 @@
   </div>
   <pre id="out"></pre>
   <script>
+    if('serviceWorker' in navigator){ navigator.serviceWorker.register('/web/sw.js').catch(()=>{}) }
     const out=document.getElementById('out');
     function log(x){ out.textContent += (typeof x==='string'?x:JSON.stringify(x,null,2))+'\n' }
     async function post(url,body,headers={}){
@@ -47,10 +48,12 @@
       const sid=document.getElementById('sid').value.trim();
       const payload=document.getElementById('payload').value.trim();
       let obj; try{ obj=JSON.parse(payload) }catch(e){ log('bad json'); return }
-      const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(JSON.stringify(obj)));
-      const hex=Array.from(new Uint8Array(digest)).map(b=>('0'+b.toString(16)).slice(-2)).join('');
+      const digestBuf=await crypto.subtle.digest('SHA-256', new TextEncoder().encode(JSON.stringify(obj)));
+      const hex=Array.from(new Uint8Array(digestBuf)).map(b=>('0'+b.toString(16)).slice(-2)).join('');
       const headers={'Idempotency-Key':hex.slice(0,32)};
-      const res=await post(base+`/v1/kyc/sessions/${sid}/finalize`,{resultDigest:hex},headers);
+      let deviceId=localStorage.getItem('deviceId'); if(!deviceId){ deviceId='web-'+Math.random().toString(36).slice(2); localStorage.setItem('deviceId',deviceId) }
+      const signature=hex; // simple stub; server only checks presence
+      const res=await post(base+`/v1/kyc/sessions/${sid}/finalize`,{resultDigest:hex,signature,deviceId},headers);
       log(res)
     }
   </script>

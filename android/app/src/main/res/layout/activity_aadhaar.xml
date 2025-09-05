@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="16dp">
+  <Button android:id="@+id/btn_pick_zip" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Pick Aadhaar ZIP"/>
+  <EditText android:id="@+id/et_share_code" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Share code (4 digits)" android:inputType="numberPassword" android:maxLength="4" android:layout_marginTop="12dp"/>
+  <Button android:id="@+id/btn_verify" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Verify & Submit" android:layout_marginTop="12dp"/>
+  <TextView android:id="@+id/tv_status" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Status" android:layout_marginTop="16dp"/>
+</LinearLayout>

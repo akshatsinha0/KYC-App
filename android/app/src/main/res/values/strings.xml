@@ -16,5 +16,10 @@
   <string name="sync_retry">Retry Sync Now</string>
   <string name="sync_test">Create Test Sync Job</string>
   <string name="sync_info">Sync runs automatically every 15 minutes when connected to network and battery is not low. Failed jobs will retry with exponential backoff.</string>
+  
+  <!-- Aadhaar screen -->
+  <string name="aadhaar_zip_selected">ZIP selected</string>
+  <string name="aadhaar_zip_not_selected">No ZIP selected</string>
+  <string name="aadhaar_ok">Aadhaar verified</string>
 </resources>
 

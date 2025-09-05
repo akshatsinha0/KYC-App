@@ -16,5 +16,10 @@
   <string name="sync_retry">अभी सिंक पुनः प्रयास करें</string>
   <string name="sync_test">टेस्ट सिंक जॉब बनाएं</string>
   <string name="sync_info">नेटवर्क कनेक्शन और बैटरी कम न होने पर सिंक हर 15 मिनट में अपने आप चलता है। असफल जॉब्स exponential backoff के साथ पुनः प्रयास करेंगे।</string>
+  
+  <!-- Aadhaar screen -->
+  <string name="aadhaar_zip_selected">ZIP चुना गया</string>
+  <string name="aadhaar_zip_not_selected">ZIP नहीं चुना</string>
+  <string name="aadhaar_ok">आधार सत्यापित</string>
 </resources>
 
